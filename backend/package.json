@@ -8,9 +8,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.0"
+    "mongoose": "^8.15.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": "14.x"
   },
