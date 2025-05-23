@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const contactRoutes = require('./routes/contactRoutes');
+const contactRoutes = require('./routes/ExampleRoutes');
 app.use('/api/contact', contactRoutes);
 
 
