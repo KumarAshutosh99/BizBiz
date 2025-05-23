@@ -234,5 +234,37 @@
   <script>
     AOS.init(); // Initialize AOS
   </script>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault(); // Prevent form from reloading the page
+
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    phone: this.phone.value,
+    message: this.message.value,
+  };
+
+  try {
+    const response = await fetch('https://your-backend-name.onrender.com/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      this.reset(); // Clear the form
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
+});
+</script>
+
 </body>
 </html>
