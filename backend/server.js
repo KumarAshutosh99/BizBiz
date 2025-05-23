@@ -11,8 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const exampleRoutes = require('./routes/exampleRoutes');
-app.use('/api/example', exampleRoutes);
+const contactRoutes = require('./routes/contactRoutes');
+app.use('/api/contact', contactRoutes);
+
 
 // MongoDB Connection
 const mongoURI = process.env.MONGO_URI;
